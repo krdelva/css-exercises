@@ -14,19 +14,32 @@ body {
   background: darkmagenta;
   color: white;
 
+  /* Part of my solution */
+  display: flex;
+  align-items: center;
   font-size: 32px;
   font-weight: 900;
+  padding: 0 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
+
+  /* Part of my solution */
+  display: flex;
+  flex: 1 0 auto;
 }
 
 .card {
@@ -36,21 +49,35 @@ body {
 
   /* Part of my solution */
   flex: 0 1 auto;
-  gap: 8px;
   max-width: 300px;
+  padding: 8px;
 }
 
 .cards {
   display: flex;
   flex-flow: row wrap;
+  gap: 32px;
+  padding: 32px;
 }
 .content {
   display: flex;
   flex: 1;
-  justify-content: center;
 }
 
-.sidebar {
+.sidebar > ul {
   display: flex;
-  flex: 1 0 auto;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 16px;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
 }
